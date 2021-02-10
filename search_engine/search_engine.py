@@ -43,12 +43,14 @@ def search_file(search_word, dir_path):
     sort_dict_by_vale(list_of_matching_files)
     iterate_through_dict(list_of_matching_files)
 
+## Loop through the values and output an ordered string
 def iterate_through_dict(files):
     print(f"Top matching results for word")
     for key, value in files.items():
         print(f"Found {value} times in {key}")
 
-def sort_dict_by_vale(given_dict):
+## Arrange the dictionary from highest to lowest
+def sort_dict_by_value(given_dict):
     sorted_values = sorted(given_dict.values())
     sorted_dict = {}
     for i in sorted_values:
